@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-serif;
+}
+
+.paper-grid {
+  background-image: radial-gradient(
+    circle,
+    rgba(17, 17, 16, 0.16) 1px,
+    transparent 1px
+  );
+  background-size: 26px 26px;
+}
+
+::selection {
+  @apply bg-ink text-paper;
+}
