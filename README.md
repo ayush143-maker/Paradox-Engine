@@ -9,12 +9,12 @@ With Node.js and npm available, install dependencies and start the Next.js devel
     npm install
     npm run dev
 
-Open the local URL printed by the server in your browser. To create a production build, run:
+Open the local URL printed by the server in your browser to review changes. To create a production build, run:
 
     npm run build
 
-The package also provides `npm start` to serve a completed production build.
+After building, use the package's `npm start` command to serve the production build locally.
 
 ## Explore the code
 
-Page routes are under `app/`, reusable interface elements under `components/`, and exhibit material under `content/`. When adding an exhibit, explain its assumptions and reasoning clearly.
+Page routes are under `app/`, reusable interface elements under `components/`, and exhibit material under `content/`. When adding an exhibit, explain its assumptions and reasoning clearly, then review the exhibit in the local app.
