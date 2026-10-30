@@ -34,9 +34,18 @@ For visual changes, review `tailwind.config.ts` alongside the existing page and 
 These are actions to perform after a change, not verified results:
 
 - Open the app at the local URL and inspect its entry page. Navigate to the affected exhibit, including the Monty Hall or Zeno material if that is what changed.
-- Check image and media references used by the affected route or components against the files and paths in the repository. The supplied file list does not identify a separate asset directory, so inspect the actual references before assuming where media belongs.
 - Try the exhibit's described interactions and follow the museum navigation. Check that the displayed explanation still matches the interaction after content or component changes.
 - Inspect the entry page and affected exhibit at narrow mobile-sized and wide desktop-sized viewports. Look for clipped explanations, overlapping controls, and difficult-to-use navigation.
+
+## Asset and loading review checklist
+
+These are review steps, not measured performance results or claims that assets have been checked:
+
+- Search the affected files in `app/`, `components/`, and `content/` for local image, audio, font, and other media references. Check that each referenced path resolves to the intended file; the supplied file list does not identify a separate asset directory.
+- Review media file sizes and, for images, dimensions. Consider whether large files can be resized or compressed without losing needed exhibit detail; do not remove useful exhibit material just to reduce the asset list.
+- Check whether each asset is still referenced by a route or component before removing it. Update references and review the affected exhibit if you move, rename, or replace an asset.
+- Inspect the code for external font and script references. Confirm each is intentional, still needed, and has an appropriate fallback or behavior if it cannot load. Do not assume the repository has a particular external dependency without checking the references.
+- After asset or dependency changes, open the affected exhibit and check for missing media, unexpected loading behavior, and readable content while any referenced resource is unavailable.
 
 ## Accessibility review checklist
 
