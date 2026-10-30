@@ -37,3 +37,14 @@ These are actions to perform after a change, not verified results:
 - Check image and media references used by the affected route or components against the files and paths in the repository. The supplied file list does not identify a separate asset directory, so inspect the actual references before assuming where media belongs.
 - Try the exhibit's described interactions and follow the museum navigation. Check that the displayed explanation still matches the interaction after content or component changes.
 - Inspect the entry page and affected exhibit at narrow mobile-sized and wide desktop-sized viewports. Look for clipped explanations, overlapping controls, and difficult-to-use navigation.
+
+## Accessibility review checklist
+
+These are future checks to perform; they are not claims that the app has been tested or found accessible:
+
+- Use only a keyboard to move through the museum navigation and any controls on the affected exhibit. Check that every interactive item can receive focus and be operated, and that the focus order follows the page's reading order.
+- Watch the keyboard focus indicator as it moves. Check that it remains visible against the page styling and is not obscured by other content.
+- Check that navigation and exhibit controls have meaningful accessible names, and that labels explain what a control does rather than relying on an icon or visual position alone.
+- Review text and control contrast against their backgrounds, including any text placed over exhibit visuals. Check that mathematical explanations remain readable when styling changes.
+- For images or diagrams that convey exhibit information, check that appropriate text alternatives convey the same relevant meaning. If an image is decorative, check that it does not add distracting redundant text.
+- If an exhibit animates or moves, check whether the motion can be reduced or paused and whether the explanation remains understandable without animation.
