@@ -25,6 +25,12 @@ Page routes are under `app/`, reusable interface elements under `components/`, a
 
 The supplied file list does not identify specific exhibit files or a separate asset directory. Locate existing media references before adding or replacing assets, and keep paths in sync with their files. For visual changes, review `tailwind.config.ts` alongside existing page and component styles; check the code for project conventions rather than assuming particular theme settings.
 
+## Configuration and data handling
+
+The repository lists project configuration files such as `next.config.mjs`, `tailwind.config.ts`, `tsconfig.json`, and `.eslintrc.json`, but no `.env.example` or other environment-variable template is listed. Treat tracked configuration as project code: review changes before committing, and do not put passwords, tokens, or other real secrets in tracked files. If a template is added later, include only placeholder values and document its purpose without copying live credentials into it.
+
+This project uses Next.js, so check whether a value is used only on the server or is included in the page and its browser bundles. Anything delivered to a browser—including client-side configuration and page data—must be treated as public, not as a secret. Do not add secrets to `app/`, `components/`, or `content/` if those values may be rendered or bundled for visitors. Review exhibit content and assets before committing them for information that should not be public.
+
 ## Browser and platform reliability checklist
 
 This is a checklist for future review, not a record of completed testing or verified compatibility:
