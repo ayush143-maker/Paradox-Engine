@@ -77,3 +77,14 @@ These are future checks, not claims that the app has been tested or found access
 - `app` — application directory.
 - `components` — component directory.
 - `package.json` — package manifest, dependency list, and declared scripts.
+
+## Package scripts
+
+The following scripts are declared in the repository's `package.json`. Their presence documents the configured commands; it does not mean they have been executed or passed.
+
+| Script | Command | Purpose |
+|---|---|---|
+| `dev` | `npm run dev` | Starts the development server. |
+| `build` | `npm run build` | Runs the configured production build command. |
+| `start` | `npm run start` | Starts the Expo development server. |
+| `lint` | `npm run lint` | Runs the configured Next.js lint command. |
