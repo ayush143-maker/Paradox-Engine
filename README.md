@@ -4,12 +4,12 @@ An interactive collection of mathematical and logical paradoxes presented as a s
 
 ## Run locally
 
-Install dependencies and start the Next.js development server:
+With Node.js and npm available, install dependencies and start the Next.js development server:
 
     npm install
     npm run dev
 
-Build the production version with:
+Open the local URL printed by the server in your browser. To create a production build, run:
 
     npm run build
 
