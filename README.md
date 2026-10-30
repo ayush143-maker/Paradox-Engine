@@ -1,6 +1,6 @@
 # Paradox-Engine
 
-An interactive collection of mathematical and logical paradoxes presented as a small digital museum. Browse exhibits including the Monty Hall problem and Zeno's paradoxes. The README describes the exhibit collection but does not specify particular interface controls or interactions.
+An interactive collection of mathematical and logical paradoxes presented as a small digital museum. Browse exhibits including the Monty Hall problem and Zeno's paradoxes. The README does not specify particular interface controls or interactions.
 
 ## Run locally
 
