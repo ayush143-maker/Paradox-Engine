@@ -17,13 +17,23 @@ Open the local URL printed by the development server. To create a production bui
 npm run build
 ```
 
-After a successful build, use `npm start` to serve it locally. No hosting provider or deployment configuration is documented.
+After a successful build, use `npm start` to serve it locally. These commands are documented for local use; they do not identify a hosting provider or specify deployment settings.
 
 ## Explore and edit
 
 Routes are under `app/`, reusable interface elements under `components/`, and exhibit material under `content/`. When adding or editing an exhibit, explain its assumptions and reasoning clearly, then review the affected route in the local app.
 
 The supplied file list does not identify specific exhibit files or a separate asset directory. Locate existing media references before adding or replacing assets, and keep paths in sync with their files. For visual changes, review `tailwind.config.ts` alongside existing page and component styles; check the code for project conventions rather than assuming particular theme settings.
+
+## Deployment-readiness checklist
+
+The repository includes Next.js-related files such as `next.config.mjs`, but the available information does not document a hosting target or deployment configuration. Treat these as preparation steps, not as a record of completed deployment checks:
+
+- [ ] **Confirm the published source and output.** Check the project's actual package scripts and `next.config.mjs` before choosing a build command, output directory, or publication root. Do not assume that a folder named `out`, `build`, or another directory is produced. The documented `npm run build` command creates a production build; confirm what the configured project produces and what the intended publishing process expects.
+- [ ] **Check route and asset paths.** Routes live under `app/`. Review references in routes, components, and content, and confirm each referenced asset exists at the expected path. Preserve relative paths when moving files. If the app will be served from a path other than the site root, verify that routes and asset references still resolve in that context.
+- [ ] **Review configuration and data.** The repository lists configuration files including `next.config.mjs`, `tailwind.config.ts`, `tsconfig.json`, and `.eslintrc.json`, but no `.env.example` or other environment-variable template is listed. Do not commit passwords, tokens, or other real secrets. If configuration values are needed, use the intended configuration mechanism and placeholders in any tracked examples. Treat anything delivered to a browser as public, not as a secret.
+- [ ] **Review public content.** Check exhibit text and assets for information that should not be published before committing or making them available.
+- [ ] **Preview after publishing.** After publication, open the published site and manually check the home page and affected exhibit routes. Confirm that styles and referenced assets load, links lead where expected, and content displays correctly. Use browser Console and Network panels to investigate errors or failed requests. This is a recommended final review, not a claim that a deployment or preview has already occurred.
 
 ## Configuration and data handling
 
