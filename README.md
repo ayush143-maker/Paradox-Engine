@@ -65,3 +65,9 @@ These are future checks, not claims that the app has been tested or found access
 - Review text and control contrast, including text over exhibit visuals. Check that mathematical explanations remain readable after styling changes.
 - For informative images or diagrams, check that text alternatives convey relevant meaning; avoid redundant announcements for decorative images.
 - If an exhibit animates or moves, check whether motion can be reduced or paused and whether the explanation remains understandable without animation.
+
+## Final release review
+
+- Confirm the documented starting point still matches the files present at the repository root.
+- Check the scripts and dependency versions in `package.json`; use the repository's declared workflow rather than assuming a generic build command.
+- Review the published result once on a narrow screen and once on a wider screen; treat this as a release check, not an automated test report.
