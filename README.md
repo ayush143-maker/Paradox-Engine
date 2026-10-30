@@ -25,6 +25,15 @@ Page routes are under `app/`, reusable interface elements under `components/`, a
 
 ## Personalizing the museum
 
-Edit exhibit wording in the relevant material under `content/`, and inspect the related route in `app/` and interface elements in `components/` before changing how that content is presented. The supplied file list does not identify specific exhibit files or a separate asset directory, so locate the existing references before adding or replacing media. Preserve any relative paths you find, and check the affected route after edits.
+Edit exhibit wording in the relevant material under `content/`, and inspect the related route in `app/` and interface elements in `components/` before changing how that content is presented. The supplied file list does not identify specific exhibit files or a separate asset directory, so locate existing references before adding or replacing media. Preserve any relative paths you find, and review the affected route after edits.
 
-For visual changes, review `tailwind.config.ts` alongside the existing page and component styles before changing project-wide theme settings. This README does not document particular theme tokens or project-specific settings; treat their exact locations and conventions as a review item in the code rather than assuming new ones.
+For visual changes, review `tailwind.config.ts` alongside the existing page and component styles before changing project-wide theme settings. This README does not document particular theme tokens or project-specific settings; check their locations and conventions in the code rather than assuming new ones.
+
+## Manual review checklist
+
+These are actions to perform after a change, not verified results:
+
+- Open the app at the local URL and inspect its entry page. Navigate to the affected exhibit, including the Monty Hall or Zeno material if that is what changed.
+- Check image and media references used by the affected route or components against the files and paths in the repository. The supplied file list does not identify a separate asset directory, so inspect the actual references before assuming where media belongs.
+- Try the exhibit's described interactions and follow the museum navigation. Check that the displayed explanation still matches the interaction after content or component changes.
+- Inspect the entry page and affected exhibit at narrow mobile-sized and wide desktop-sized viewports. Look for clipped explanations, overlapping controls, and difficult-to-use navigation.
