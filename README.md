@@ -13,7 +13,7 @@ Open the local URL printed by the server in your browser to review changes. To c
 
     npm run build
 
-After building, use the package's `npm start` command to serve the production build locally.
+After a successful build, use the package's `npm start` command to serve the production build locally. No hosting provider or deployment configuration is documented.
 
 ## Explore the code
 
