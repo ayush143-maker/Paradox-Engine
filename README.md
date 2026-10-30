@@ -31,15 +31,20 @@ The repository lists configuration files such as `next.config.mjs`, `tailwind.co
 
 This project uses Next.js, so check whether a value is used only on the server or included in page data and browser bundles. Anything delivered to a browser must be treated as public, not as a secret. Review exhibit content and assets before committing them for information that should not be public.
 
+## Contributor handoff
+
+Keep each change scoped to the relevant route, component, exhibit content, or asset. Preserve existing filenames and relative references unless a change requires updating every affected reference. In the handoff, summarize what changed and which parts of the museum it affects.
+
+Before publishing, manually review the changed route in the local app, including relevant content and visual behavior. This is a review checklist, not a record of checks already completed.
+
 ## Troubleshooting
 
 Use these as diagnostic steps; they are not reports of known failures:
 
-1. Confirm you are opening the intended page or route served by the app. Check the relevant route files under `app/` rather than assuming every exhibit is at the root URL.
+1. Confirm you are opening the intended route. Check route files under `app/` rather than assuming every exhibit is at the root URL.
 2. If a style, script, or media item is missing, compare its reference in `app/`, `components/`, or `content/` with the file location. Preserve the intended relative path when moving files.
 3. Open the browser developer tools and inspect Console and Network while loading the route. Use errors and failed requests to identify which resource or code path needs attention.
-4. Confirm any required local asset is present in the repository and that its referenced name and path match. The supplied file list does not identify a dedicated asset directory.
-5. Separate local-resource failures from network-dependent resources: inspect the code and Network requests to determine whether a resource is local or fetched from elsewhere. No external resource links are listed in the supplied README metadata.
+4. Confirm any required local asset is present and that its referenced name and path match. The supplied file list does not identify a dedicated asset directory.
 
 ## Accessibility review checklist
 
