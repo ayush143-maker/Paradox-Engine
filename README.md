@@ -1,15 +1,20 @@
 # Paradox-Engine
 
-An interactive “museum” of mathematical and logical paradoxes built with Next.js and React. The current content includes exhibits such as Monty Hall and Zeno’s paradoxes.
+**Paradox-Engine** is an interactive collection of mathematical and logical paradoxes, presented as a small digital museum. The Next.js and React frontend organises exhibits and guides visitors through ideas that challenge intuition, including examples such as the Monty Hall problem and Zeno's paradoxes.
 
 ## Run locally
 
-Install dependencies with npm install, then start the development server with npm run dev. Run npm run build to create a production build.
+Install the dependencies and start the Next.js development server:
 
-## Development workflow
+    npm install
+    npm run dev
 
-Start with the package scripts and the existing source organization. Locate the page or screen component and its imports before changing the UI. Keep shared components and styles consistent rather than duplicating the same behavior in multiple places.
+Build the production version with:
 
-## Validation
+    npm run build
 
-Run the development server while iterating, then run the production build before deployment. Check type/build output, browser-console messages, navigation, and the final deployed page. Native-wrapper projects also need a separate on-device test after syncing the web build.
+The package also provides npm start for serving a completed production build.
+
+## Explore the code
+
+The repository separates page routes under app/, reusable interface elements under components/, and exhibit material under content/. When adding an exhibit, make the setup clear, explain the reasoning step by step, and keep the conclusion consistent with the assumptions shown to the reader.
